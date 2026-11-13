@@ -1,3 +1,5 @@
+> **Jarvis fork notice (2026-11-13).** This fork of [Ken Kai’s Roamies](https://github.com/KenKaiii/Roamies) changes the panel heading and byline to “Rmies by zelux.” The source is released under the [GNU Affero General Public License v3.0](LICENSE).
+
 <p align="center">
   <img src="showcase/tauri/src-tauri/icons/128x128@2x.png" width="128" alt="Roamies icon">
 </p>
