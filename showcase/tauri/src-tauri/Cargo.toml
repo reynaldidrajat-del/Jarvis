@@ -25,7 +25,7 @@ objc2-service-management = { version = "=0.3.2", default-features = false, featu
 # and the desktop portal on Wayland. All three are already in Cargo.lock through Tauri and its plugins.
 [target.'cfg(target_os = "linux")'.dependencies]
 gtk = "=0.18.2"
-x11rb = "=0.13.2"
+x11rb = "=0.14.0"
 zbus = "=5.19.0"
 
 [profile.release]
