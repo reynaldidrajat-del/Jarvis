@@ -1,0 +1,4 @@
+numpy
+openai-whisper==20250625
+pywin32
+sounddevice

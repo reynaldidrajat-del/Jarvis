@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jarvis — Galaksi Pengetahuan</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <div class="dashboard">
+    <canvas id="galaxy" aria-hidden="true"></canvas>
+    <aside class="library" aria-label="Sumber pengetahuan">
+      <header class="brand">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <div><h1>JARVIS</h1><p>Galaksi Pengetahuan</p></div>
+      </header>
+      <div class="scope-header">
+        <button id="knowledge-back" type="button" hidden>← Galaksi Pengetahuan</button>
+        <h2 id="scope-title">Pengetahuan</h2>
+        <p id="slide-count">Menyiapkan galaksi…</p>
+      </div>
+      <label class="search" for="search"><span aria-hidden="true"></span><input id="search" type="search" placeholder="Cari pengetahuan…" aria-label="Cari pengetahuan" autocomplete="off"></label>
+      <section class="inspector" aria-label="Inspektor pengetahuan">
+        <div class="eyebrow">INSPEKTOR</div>
+        <div id="inspection"><p>Pilih satu node untuk membaca sumbernya.</p></div>
+      </section>
+      <details class="slide-browser" open>
+        <summary id="source-summary">Daftar pengetahuan</summary>
+        <div id="slide-list" class="slide-list"></div>
+      </details>
+      <div class="legend" id="legend" aria-label="Jenis pengetahuan"></div>
+      <button id="choose" class="choose-deck" type="button">Pilih deck PowerPoint</button>
+    </aside>
+
+    <main class="map" aria-label="Galaksi pengetahuan">
+      <nav class="map-tools" aria-label="Kontrol peta">
+        <button id="fit" type="button">Pas ke layar</button>
+        <button id="rotate" type="button" aria-pressed="false">Putar</button>
+      </nav>
+      <p id="map-empty" class="map-empty">Memuat galaksi…</p>
+      <div class="conversation">
+        <div id="answer-panel" class="answer-panel" aria-live="polite" hidden>
+          <p class="transcript" id="transcript"></p>
+          <p class="answer" id="answer"></p>
+          <div id="citations" class="citations"></div>
+          <pre id="details" hidden></pre>
+        </div>
+        <form class="composer" id="composer">
+          <label for="question" class="sr-only">Tanya Jarvis</label>
+          <input id="question" placeholder="Tanya Jarvis atau beri perintah…" maxlength="4000" autocomplete="off">
+          <button id="send" type="submit">Kirim</button>
+        </form>
+        <div class="voice-controls" aria-label="Kontrol suara dan layar">
+          <button id="talk" type="button" title="Tahan tombol ini atau Spasi untuk bicara" aria-keyshortcuts="Space" aria-pressed="false" disabled>Bicara</button>
+          <label class="sr-only" for="speech-mode">Bahasa mikrofon</label>
+          <select id="speech-mode" title="Bahasa mikrofon">
+            <option value="id">ID</option>
+            <option value="en">EN</option>
+            <option value="mix">Campuran</option>
+          </select>
+          <button id="listen" type="button" title="Dengarkan kata pemicu Jarvis" aria-pressed="false" disabled>Dengarkan</button>
+          <button id="voice" type="button" title="Putar suara jawaban Jarvis" aria-pressed="true">Suara jawaban</button>
+          <button id="screen" type="button" aria-pressed="false">Bagikan layar</button>
+          <span id="screen-live" class="screen-live" role="status" hidden>LAYAR DIBAGIKAN</span>
+        </div>
+      </div>
+    </main>
+
+    <aside class="assistant" aria-label="Status Jarvis">
+      <div class="core" id="core" data-phase="ready" aria-hidden="true">
+        <div class="core-ticks"></div><div class="core-sweep"></div><div class="core-orbit"></div>
+        <div class="core-center"><span>J.A.R.V.I.S.</span></div>
+      </div>
+      <div class="assistant-state">
+        <div class="state-pill" id="phase" data-phase="ready">MENGHUBUNGKAN</div>
+        <div class="model-name">CHAT · GEMINI 3.8 FLASH</div>
+        <p id="welcome" aria-live="polite" hidden></p>
+        <p id="status" role="status">Menyiapkan Jarvis…</p>
+      </div>
+      <section class="presenter" id="presenter" aria-label="Kontrol presentasi" hidden>
+        <h2>PowerPoint</h2>
+        <button id="present" type="button" disabled>Mulai presentasi</button>
+        <button id="pause" type="button" disabled>Jeda narasi</button>
+        <button id="finish" type="button" disabled>Selesai &amp; mulai tanya jawab</button>
+        <button id="stop" type="button" disabled>Hentikan</button>
+      </section>
+    </aside>
+  </div>
+</body>
+</html>

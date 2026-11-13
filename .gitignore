@@ -1,0 +1,21 @@
+/config.json
+/.env
+/.env.*
+!/.env.example
+/.playwright-mcp/
+/Build-Your-Own-Jarvis-GPT-6-Astra-Prompt-Pack.pdf
+/materi external/
+/*.pptx
+/notes-galaxy/notes/
+/notes-galaxy/viewer/
+*.sqlite3*
+*.db
+*.log
+__pycache__/
+*.py[cod]
+.venv/
+node_modules/
+.local-tools/
+*.safetensors
+*.pt
+desktop.ini
