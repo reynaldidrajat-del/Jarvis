@@ -8,7 +8,7 @@ repository = "https://github.com/KenKaiii/Roamies"
 homepage = "https://github.com/KenKaiii/Roamies"
 
 [build-dependencies]
-tauri-build = { version = "=2.7.4", features = [] }
+tauri-build = { version = "=2.7.5", features = [] }
 
 [dependencies]
 tauri = { version = "=2.12.5", features = ["tray-icon", "macos-private-api"] }
